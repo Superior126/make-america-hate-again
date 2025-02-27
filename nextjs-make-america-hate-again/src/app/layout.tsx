@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Make America Hate Again",
   description: "A collection of things that republicans are doing to destroy America.",
+  other: {
+    "google-adsense-account": "ca-pub-2539147027482335",
+  },
 };
 
 export default function RootLayout({
