@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.post {
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+}
+
+.post h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.post h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 20px 0;
+  width: 100%;
+  border-bottom: 1px solid rgb(196, 196, 196);
+}
+
+.header-image {
+  border-radius: 0.5em;
+  width: 100%;
+  height: 300px;
+}
+
+.header-title {
+  font-size: 35px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.header-description {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+header {
+  border-bottom: 1px solid black;
+}
+
+.header-link {
+  color: blue;
+  text-decoration: underline;
+  margin-top: 0;
+  margin-bottom: 10px;
+  display: block;
+}
