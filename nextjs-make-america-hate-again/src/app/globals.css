@@ -38,6 +38,11 @@ body {
   margin: 10px 0;
 }
 
+.post a {
+  color: blue;
+  text-decoration: underline;
+}
+
 .section-title {
   font-size: 24px;
   font-weight: 700;
