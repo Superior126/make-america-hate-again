@@ -394,6 +394,15 @@
     get-it "^8.6.7"
     rxjs "^7.0.0"
 
+"@sanity/client@^6.28.3":
+  version "6.28.3"
+  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-6.28.3.tgz#d9e0533ef0a6fafff14b989b740800b0abf06282"
+  integrity sha512-/W/w0pl0wx1vn6RKUaOTNHVcBDvBcjZk6agpl4vwTCxvNQhh74nY9xk+/heap3KriSHp95ilChv/qVYMz2/l3w==
+  dependencies:
+    "@sanity/eventsource" "^5.0.2"
+    get-it "^8.6.7"
+    rxjs "^7.0.0"
+
 "@sanity/color@^3.0.6":
   version "3.0.6"
   resolved "https://registry.npmjs.org/@sanity/color/-/color-3.0.6.tgz"

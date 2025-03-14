@@ -1,4 +1,4 @@
-import { type SanityDocument, type PortableTextBlock } from "next-sanity";
+import { type SanityDocument } from "next-sanity";
 import { PortableText } from "@portabletext/react";
 
 import { client } from "@/sanity/client";
@@ -12,15 +12,8 @@ const POSTS_QUERY = `*[ _type == "post" ] | order(_createdAt desc) {
 
 const options = { next: { revalidate: 30 } };
 
-type Post = {
-  _id: string;
-  title: string;
-  description: PortableTextBlock[];
-  whyItsBad: PortableTextBlock[];
-}
-
 export default async function IndexPage() {
-  const posts: Post[] = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
+  const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
   console.log("Fetched posts:", posts);
 
   return (
