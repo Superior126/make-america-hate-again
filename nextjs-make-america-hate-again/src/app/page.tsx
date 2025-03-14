@@ -1,5 +1,5 @@
 import { type SanityDocument, type PortableTextBlock } from "next-sanity";
-import { PortableText, type PortableTextReactComponents } from "@portabletext/react";
+import { PortableText } from "@portabletext/react";
 
 import { client } from "@/sanity/client";
 
