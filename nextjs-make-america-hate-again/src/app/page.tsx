@@ -1,5 +1,5 @@
 import { type SanityDocument, type PortableTextBlock } from "next-sanity";
-import { PortableText } from "@portabletext/react";
+import { PortableText, type PortableTextReactComponents } from "@portabletext/react";
 
 import { client } from "@/sanity/client";
 
@@ -11,27 +11,6 @@ const POSTS_QUERY = `*[ _type == "post" ] | order(_createdAt desc) {
 }`;
 
 const options = { next: { revalidate: 30 } };
-
-type LinkProps = {
-  children: React.ReactNode;
-  value: {
-    href: string;
-  };
-};
-
-// Define custom components for PortableText
-const portableComponents = {
-  marks: {
-    link: ({children, value}: LinkProps) => {
-      const rel = !value.href.startsWith('/') ? 'noreferrer noopener' : undefined
-      return (
-        <a href={value.href} rel={rel} target="_blank">
-          {children}
-        </a>
-      )
-    },
-  },
-};
 
 type Post = {
   _id: string;
@@ -57,9 +36,9 @@ export default async function IndexPage() {
         {posts.map((post) => (
           <li key={post._id} className="post">
               <h1 className="font-semibold">{post.title}</h1>
-              <PortableText blocks={post.description} components={portableComponents} />      
+              <PortableText value={post.description} />      
               <h1 className="section-title">Why it&apos;s bad</h1>
-              <PortableText blocks={post.whyItsBad} components={portableComponents} />     
+              <PortableText value={post.whyItsBad} />     
           </li> 
         ))}
       </ul>
