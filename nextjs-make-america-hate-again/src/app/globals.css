@@ -72,6 +72,38 @@ header {
   border-bottom: 1px solid black;
 }
 
+.header-image-container {
+  position: relative;
+}
+
+.header-image-source {
+  position: absolute;
+  bottom: 10;
+  left: 10;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.header-image-source img {
+  width: 25px;
+  height: inherit;
+  user-select: none;
+}
+
+.header-image-source p {
+  user-select: none;
+  margin-right: 10px;
+  display: none;
+}
+
+.header-image-source:hover > p {
+  display: block;
+}
+
 .header-link {
   color: blue;
   text-decoration: underline;

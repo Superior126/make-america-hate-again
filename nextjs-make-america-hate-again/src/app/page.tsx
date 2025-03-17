@@ -19,10 +19,15 @@ export default async function IndexPage() {
   return (
     <main className="container mx-auto min-h-screen max-w-3xl p-8">
       <header>
-        <img className="header-image" src="https://www.commondreams.org/sites/default/files/views-article/make_america_hate_again.jpg" alt="header image" />
+        <div className="header-image-container">
+          <img className="header-image" src="https://www.commondreams.org/sites/default/files/views-article/make_america_hate_again.jpg" alt="header image" />
+          <a className="header-image-source" href="https://www.commondreams.org/views/2017/08/15/making-america-hate-again" target="_blank">
+            <img src="/link.svg" alt="" />
+            <p>Image Source</p>
+          </a>
+        </div>
         <h1 className="header-title">Make America Hate Again</h1>
         <p className="header-description">A collection of things that republicans are doing to destroy America.</p>
-        <a href="https://www.commondreams.org/views/2017/08/15/making-america-hate-again" className="header-link">Image Source</a>
       </header>
       <br style={{height: "2rem"}} />
       <ul className="flex flex-col gap-y-4">
