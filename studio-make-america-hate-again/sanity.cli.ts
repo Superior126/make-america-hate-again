@@ -1,9 +1,12 @@
-import {defineCliConfig} from 'sanity/cli'
+import {defineCliConfig, getStudioEnvironmentVariables} from 'sanity/cli'
+
+// Get dataset
+const dataset_ = getStudioEnvironmentVariables().SANITY_STUDIO_DATA_SET || "production"
 
 export default defineCliConfig({
   api: {
     projectId: 'qfsk5hf2',
-    dataset: 'production'
+    dataset: dataset_
   },
   /**
    * Enable auto-updates for studios.
