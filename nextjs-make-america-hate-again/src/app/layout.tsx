@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import MS_Clarity from "./components/ms_clarity";
+import MS_Clarity from "./components/ms_clarity/ms_clarity";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

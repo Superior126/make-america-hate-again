@@ -1,11 +1,11 @@
 import { createClient } from "@sanity/client";
 
-// Get run env
-const runENV = process.env.NODE_ENV;
+// Get data set
+const dataset_ = process.env.SANITY_DATA_SET || "production"
 
 export const client = createClient({
   projectId: "qfsk5hf2",
-  dataset: runENV === "development" ? "development" : "production",
+  dataset: dataset_,
   apiVersion: "2024-01-01",
   useCdn: false,
 });

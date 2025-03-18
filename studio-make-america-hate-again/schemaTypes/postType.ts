@@ -15,7 +15,7 @@ export const postType = defineType({
     }),
     defineField({
       name: 'description',
-      description: 'A short description of the post',
+      description: 'A description of the post',
       type: 'array',
       of: [
         {

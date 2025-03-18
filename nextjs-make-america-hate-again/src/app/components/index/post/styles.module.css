@@ -1,0 +1,40 @@
+.post {
+    background-color: #F1F1F1;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.post h1 {
+    font-size: x-large;
+    font-weight: bold;
+    word-wrap: break-word;
+    margin: 10px 0px;
+}
+
+.post h2 {
+    font-size: 20px;
+    margin: 10px 0px;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+.post ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.post ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.post li {
+    margin: 5px 0px;
+}
+
+.post a {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
